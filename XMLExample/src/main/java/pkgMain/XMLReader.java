@@ -44,6 +44,7 @@ public class XMLReader {
 		for (Book b : cat.getBooks()) {
 			double newPrice = (b.getPrice() * PriceIncrease) + b.getPrice();			
 			b.setPrice(Math.round(newPrice * 100.0) / 100.0);
+			b.setCost(b.getPrice()*(0.80));
 		}
 		
 		return cat;
